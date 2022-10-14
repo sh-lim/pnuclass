@@ -77,9 +77,18 @@ void Draw00(){
 	SetHistoStyle("p_{T} (GeV/c)","Ratio","",22,20);
 	htmp->GetYaxis()->SetTitleOffset(1.3);
 
-	hratio[0]->Draw("p same");
+	//hratio[0]->Draw("p same");
 	hratio[1]->Draw("p same");
 	hratio[2]->Draw("p same");
 
+	{
+		TLegend *leg = new TLegend(0.6,0.5,0.93,0.6);
+		leg->SetFillStyle(0);
+		leg->SetBorderSize(0);
+		leg->SetTextSize(0.045);
+		leg->AddEntry(hpt[1],"0-10%/0-100%","P");
+		leg->AddEntry(hpt[2],"60-100%/0-100%","P");
+		leg->Draw();
+	}
 
 }

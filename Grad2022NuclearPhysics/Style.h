@@ -10,10 +10,11 @@ void SetPadStyle(bool log = false){
 	if ( log ){
 		gPad->SetRightMargin(0.12);
 	}else{
-		gPad->SetRightMargin(0.05);
+		gPad->SetRightMargin(0.03);
 	}
 	gPad->SetTopMargin(0.03);
-	gPad->SetBottomMargin(0.14);
+	gPad->SetBottomMargin(0.13);
+	gPad->SetTicks();
 
 	gStyle->SetLegendBorderSize(0);
 	gStyle->SetLegendFillColor(0);
